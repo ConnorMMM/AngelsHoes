@@ -8,15 +8,17 @@ public class PlayerController : MonoBehaviour
 {
     public int clickDamage = 1;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
+        if (SceneManager.Instance.IsPaused() || SceneManager.Instance.IsGameOver())
+            return;
+
+        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        {
+            SceneManager.Instance.PauseGame(true);
+            return;
+        }
+
         if(Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

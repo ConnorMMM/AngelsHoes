@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms;
 
 public class EnemySpawning : MonoBehaviour
 {
     public GameObject[] doorPositions = new GameObject[3];
     public GameObject[] enemyPrefabs;
+    public GameObject walkBox;
 
     public float timeStep = 0;
+
+    public float timeStepMax = 2;
+    public float SpawnRateIncreaser = .03f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,9 +23,12 @@ public class EnemySpawning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (SceneManager.Instance.IsPaused())
+            return;
+
         timeStep += Time.deltaTime;
         
-        if(timeStep > 1)
+        if(timeStep > timeStepMax)
         {
             timeStep = 0;
 
@@ -29,8 +37,14 @@ public class EnemySpawning : MonoBehaviour
             if (enemyPrefabs[index])
             {
                 GameObject enemy = Instantiate(enemyPrefabs[index]);
-                enemy.GetComponent<Enemy>().doorPositions = doorPositions;
+                Enemy enemyScripts = enemy.GetComponent<Enemy>();
+                enemyScripts.doorPositions = doorPositions;
+                enemyScripts.RandomiseWalkHeight(walkBox.transform.position.y - walkBox.transform.localScale.y / 2.0f, walkBox.transform.position.y + walkBox.transform.localScale.y / 2.0f);
             }
+
+            timeStepMax -= SpawnRateIncreaser * timeStepMax;
+            if (timeStepMax < 0.1)
+                timeStepMax = 0.1f;
         }
     }
 }
