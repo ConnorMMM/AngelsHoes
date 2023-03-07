@@ -10,12 +10,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (SceneManager.Instance.IsPaused() || SceneManager.Instance.IsGameOver())
+        if (LevelManager.Instance.IsPaused() || LevelManager.Instance.IsGameOver())
             return;
 
         if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
-            SceneManager.Instance.PauseGame(true);
+            LevelManager.Instance.PauseGame(true);
             return;
         }
 

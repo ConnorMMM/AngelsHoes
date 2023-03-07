@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SceneManager : Singleton<SceneManager>
+public class LevelManager : Singleton<LevelManager>
 {
     public int score = 0;
     public float faith = 50;
@@ -34,7 +34,6 @@ public class SceneManager : Singleton<SceneManager>
     {
         if (pause)
             return;
-
 
         faithMeter.size = (100 - faith) / 100.0f;
         scoreText.text = $"Score: {score}";
@@ -71,6 +70,8 @@ public class SceneManager : Singleton<SceneManager>
     {
         score += scoreValue;
         faith += faithValue;
+        if(faith > maxFaith)
+            faith = maxFaith;
     }
 
     public void PauseGame(bool state)

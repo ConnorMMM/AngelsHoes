@@ -49,14 +49,14 @@ public class Enemy : MonoBehaviour
         Vector2 ScreenSize = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.nearClipPlane));
         if(transform.position.x + .2f > ScreenSize.x || transform.position.x - .2f < -ScreenSize.x)
         {
-            SceneManager.Instance.EscapedEnemy(faithDamage);
+            LevelManager.Instance.EscapedEnemy(faithDamage);
             Destroy(gameObject);
         }
     }
 
     private void FixedUpdate()
     {
-        if (SceneManager.Instance.IsPaused())
+        if (LevelManager.Instance.IsPaused())
             return;
 
         if(transform.position.y > walkheight)
@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
             GameObject smite = Instantiate(smitePrefab);
             smite.transform.position = transform.position;
             Destroy(smite, 2);
-            SceneManager.Instance.EnemySmote(scoreValue, faithValue);
+            LevelManager.Instance.EnemySmote(scoreValue, faithValue);
         }
     }
 

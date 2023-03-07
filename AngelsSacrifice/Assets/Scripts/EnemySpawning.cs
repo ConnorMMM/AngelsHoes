@@ -23,7 +23,7 @@ public class EnemySpawning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.Instance.IsPaused())
+        if (LevelManager.Instance.IsPaused())
             return;
 
         timeStep += Time.deltaTime;
@@ -43,8 +43,8 @@ public class EnemySpawning : MonoBehaviour
             }
 
             timeStepMax -= SpawnRateIncreaser * timeStepMax;
-            if (timeStepMax < 0.1)
-                timeStepMax = 0.1f;
+            if (timeStepMax < 0.05)
+                timeStepMax = 0.05f;
         }
     }
 }
