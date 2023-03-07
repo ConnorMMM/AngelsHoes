@@ -24,7 +24,7 @@ public class EnemySpawning : MonoBehaviour
         {
             timeStep = 0;
 
-            int index = (int)(Random.value * 2);
+            int index = (int)(Random.value * 2 + 0.2f);
 
             if (enemyPrefabs[index])
             {
