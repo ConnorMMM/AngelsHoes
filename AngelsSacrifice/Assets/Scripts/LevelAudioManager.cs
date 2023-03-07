@@ -9,6 +9,7 @@ public class LevelAudioManager : Singleton<LevelAudioManager>
     public AudioSource gameloop;
     public AudioSource strike;
     public AudioSource gameOver;
+    public AudioSource lowFaith;
 
     private float time;
     private bool isGameOver;
@@ -41,4 +42,5 @@ public class LevelAudioManager : Singleton<LevelAudioManager>
         gameloop.Stop();
         isGameOver = true;
     }
+    public void PlayLowFaith() { lowFaith.Play(); }
 }

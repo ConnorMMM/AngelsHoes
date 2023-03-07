@@ -1,6 +1,7 @@
 using BLASTER_RIVALS.DesignPatterns;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,28 +18,48 @@ public class LevelManager : Singleton<LevelManager>
 
     public Scrollbar faithMeter;
     public Text scoreText;
+    public Text gameOverScoreText;
 
     public GameObject playMenu;
     public GameObject pauseMenu;
     public GameObject gameOverMenu;
+
+    private float waitTime = 2.5f;
+    private bool beforeGame = true;
+
+    private bool highFaith = true;
 
     private void Awake()
     {
         base.Awake();
 
         gameOver = false;
-        pause = false;
         pauseMenu.SetActive(false);
+        gameOverMenu.SetActive(false);
+
+        pause = true;
+        waitTime = 2.5f;
     }
 
     // Update is called once per frame
     private void Update()
     {
-        if (pause)
-            return;
-
         faithMeter.size = (100 - faith) / 100.0f;
         scoreText.text = $"Score: {score}";
+
+        if (waitTime > 0)
+        {
+            waitTime -= Time.deltaTime;
+            return;
+        }
+        else if(beforeGame)
+        {
+            beforeGame = false;
+            pause = false;
+        }
+
+        if (pause || gameOver)
+            return;
 
         if (faith <= 0)
         {
@@ -46,6 +67,19 @@ public class LevelManager : Singleton<LevelManager>
             gameOver = true;
             playMenu.SetActive(false);
             gameOverMenu.SetActive(true);
+            gameOverScoreText.text = $"Score: {score}";
+            LevelAudioManager.Instance.GameOver();
+        }
+
+        if(faith <= 20 && highFaith)
+        {
+            LevelAudioManager.Instance.PlayLowFaith();
+            highFaith = false;
+        }
+
+        if(faith > 25)
+        {
+            highFaith = true;
         }
 
         if (!gameOver)
@@ -57,10 +91,6 @@ public class LevelManager : Singleton<LevelManager>
                 score++;
                 faith -= .5f;
             }
-        }
-        else
-        {
-
         }
     }
 

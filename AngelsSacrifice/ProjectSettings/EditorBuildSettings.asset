@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: da73bf8fe25d3704ea36ab17e05ea3c8
   - enabled: 1
-    path: Assets/Scenes/AJ.unity
-    guid: 7e5d4dc2894e2e74b9f86f84f08090d1
+    path: Assets/Scenes/Connor Testing/Map Testing.unity
+    guid: ad1251ae5fe896046baa5839a0a50088
   m_configObjects: {}

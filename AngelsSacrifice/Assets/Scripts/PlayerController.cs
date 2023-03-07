@@ -10,14 +10,18 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (LevelManager.Instance.IsPaused() || LevelManager.Instance.IsGameOver())
+        if (LevelManager.Instance.IsGameOver())
             return;
 
         if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
-            LevelManager.Instance.PauseGame(true);
+            LevelManager.Instance.PauseGame(!LevelManager.Instance.IsPaused());
             return;
         }
+
+        if (LevelManager.Instance.IsPaused())
+            return;
+
 
         if(Input.GetMouseButtonDown(0))
         {
