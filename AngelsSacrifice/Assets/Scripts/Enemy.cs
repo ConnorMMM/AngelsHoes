@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEditor;
 using UnityEngine;
 
@@ -16,16 +18,18 @@ public class Enemy : MonoBehaviour
 
     public int dir = 1;
 
+    private float walkheight;
+    private bool paused = false;
+
     // Start is called before the first frame update
     private void Start()
     {
-        Vector3 spawnPoint = doorPositions[(int)(Random.value * 2)].transform.position;
-        spawnPoint.y += Random.value * -3;
+        Vector3 spawnPoint = doorPositions[(int)(Random.value * 2.9f)].transform.position;
         transform.position = spawnPoint;
 
-        if (spawnPoint.x < 0)
+        if (spawnPoint.x == doorPositions[0].transform.position.x)
             dir = 1;
-        else if (spawnPoint.x > 0)
+        else if (spawnPoint.x == doorPositions[2].transform.position.x)
             dir = -1;
         else
         {
@@ -52,7 +56,17 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.position += new Vector3(moveSpeed * dir * Time.deltaTime, 0, 0);
+        if (SceneManager.Instance.IsPaused())
+            return;
+
+        if(transform.position.y > walkheight)
+        {
+            transform.position -= new Vector3(0, moveSpeed * Time.deltaTime, 0);
+        }
+        else
+        {
+            transform.position += new Vector3(moveSpeed * dir * Time.deltaTime, 0, 0);
+        }
     }
 
     public void Hit(int damage)
@@ -66,5 +80,10 @@ public class Enemy : MonoBehaviour
             Destroy(smite, 2);
             SceneManager.Instance.EnemySmote(scoreValue, faithValue);
         }
+    }
+
+    public void RandomiseWalkHeight(float min, float max)
+    {
+        walkheight = Random.Range(min, max);
     }
 }
