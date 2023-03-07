@@ -1077,15 +1077,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-<<<<<<< HEAD
-    m_HighlightedColor: {r: 0.6666667, g: 0.8887005, b: 1, a: 1}
-    m_PressedColor: {r: 0.12941174, g: 0.6222238, b: 0.8862745, a: 1}
-    m_SelectedColor: {r: 0.06274508, g: 0.3866512, b: 0.6901961, a: 1}
-=======
     m_HighlightedColor: {r: 0.6666667, g: 0.8731463, b: 1, a: 1}
     m_PressedColor: {r: 0.12941174, g: 0.562829, b: 0.8862745, a: 1}
     m_SelectedColor: {r: 0.06274508, g: 0.33269432, b: 0.6901961, a: 1}
->>>>>>> 91f33280766ead03e87fa80574b588760d52aa8f
     m_DisabledColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1410,7 +1404,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 --- !u!1 &840446756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,8 +1472,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> 91f33280766ead03e87fa80574b588760d52aa8f
 --- !u!1 &915742683
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,15 +1535,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-<<<<<<< HEAD
-    m_HighlightedColor: {r: 0.6666667, g: 0.89705056, b: 1, a: 1}
-    m_PressedColor: {r: 0.12941174, g: 0.63237864, b: 0.8862745, a: 1}
-    m_SelectedColor: {r: 0.06274508, g: 0.40824986, b: 0.6901961, a: 1}
-=======
     m_HighlightedColor: {r: 0.6666667, g: 0.91704774, b: 1, a: 1}
     m_PressedColor: {r: 0.12941174, g: 0.6641027, b: 0.8862745, a: 1}
     m_SelectedColor: {r: 0.06274508, g: 0.42442703, b: 0.6901961, a: 1}
->>>>>>> 91f33280766ead03e87fa80574b588760d52aa8f
     m_DisabledColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4554,11 +4539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 0.5801887, g: 0.899037, b: 1, a: 1}
-=======
   m_Color: {r: 0.4669811, g: 0.7309324, b: 1, a: 1}
->>>>>>> 91f33280766ead03e87fa80574b588760d52aa8f
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4650,15 +4631,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-<<<<<<< HEAD
-    m_HighlightedColor: {r: 0.6666667, g: 0.8776142, b: 1, a: 1}
-    m_PressedColor: {r: 0.12941174, g: 0.6070492, b: 0.8862745, a: 1}
-    m_SelectedColor: {r: 0.06274508, g: 0.44396994, b: 0.6901961, a: 1}
-=======
     m_HighlightedColor: {r: 0.6666667, g: 0.91315967, b: 1, a: 1}
     m_PressedColor: {r: 0.12941174, g: 0.6434536, b: 0.8862745, a: 1}
     m_SelectedColor: {r: 0.06274508, g: 0.49437076, b: 0.6901961, a: 1}
->>>>>>> 91f33280766ead03e87fa80574b588760d52aa8f
     m_DisabledColor: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -5667,11 +5642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 0.9528302, g: 0.50347763, b: 0.4539427, a: 0.83137256}
-=======
   m_Color: {r: 0.22761661, g: 0.4658554, b: 0.8773585, a: 0.89411765}
->>>>>>> 91f33280766ead03e87fa80574b588760d52aa8f
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5887,11 +5858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< HEAD
-  m_Color: {r: 0.5801887, g: 0.8204481, b: 1, a: 1}
-=======
   m_Color: {r: 0.43921566, g: 0.7359331, b: 0.9607843, a: 0.69411767}
->>>>>>> 91f33280766ead03e87fa80574b588760d52aa8f
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5954,10 +5921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a12e29342a212c8498a161e53fdb8283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-=======
   PauseMenuUI: {fileID: 1616571237}
->>>>>>> 91f33280766ead03e87fa80574b588760d52aa8f
 --- !u!1 &1638655552
 GameObject:
   m_ObjectHideFlags: 0
@@ -6823,13 +6787,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-<<<<<<< HEAD
       - m_Target: {fileID: 1616571242}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-=======
-      - m_Target: {fileID: 1395168770}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
->>>>>>> 91f33280766ead03e87fa80574b588760d52aa8f
         m_MethodName: ExitToMenu
         m_Mode: 1
         m_Arguments:
