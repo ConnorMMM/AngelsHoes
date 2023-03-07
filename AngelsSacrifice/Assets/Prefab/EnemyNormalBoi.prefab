@@ -107,6 +107,9 @@ MonoBehaviour:
   smitePrefab: {fileID: 4562097918846156598, guid: d51dffe90846e64429178922506ac9d4, type: 3}
   moveSpeed: 4
   health: 1
+  faithDamage: 1
+  scoreValue: 1
+  faithValue: 1
   dir: 1
 --- !u!58 &-7324199034176337571
 CircleCollider2D:
@@ -168,5 +171,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
