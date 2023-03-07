@@ -17,12 +17,14 @@ public class LevelManager : Singleton<LevelManager>
 
     public Scrollbar faithMeter;
     public Text scoreText;
+
+    public GameObject playMenu;
     public GameObject pauseMenu;
+    public GameObject gameOverMenu;
 
     private void Awake()
     {
         base.Awake();
-
 
         gameOver = false;
         pause = false;
@@ -42,6 +44,8 @@ public class LevelManager : Singleton<LevelManager>
         {
             faith = 0;
             gameOver = true;
+            playMenu.SetActive(false);
+            gameOverMenu.SetActive(true);
         }
 
         if (!gameOver)

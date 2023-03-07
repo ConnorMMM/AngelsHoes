@@ -42,9 +42,9 @@ public class EnemySpawning : MonoBehaviour
                 enemyScripts.RandomiseWalkHeight(walkBox.transform.position.y - walkBox.transform.localScale.y / 2.0f, walkBox.transform.position.y + walkBox.transform.localScale.y / 2.0f);
             }
 
-            timeStepMax -= SpawnRateIncreaser * timeStepMax;
-            if (timeStepMax < 0.05)
-                timeStepMax = 0.05f;
+            timeStepMax -= SpawnRateIncreaser * (timeStepMax - .1f);
+            if (timeStepMax < 0.15)
+                timeStepMax = 0.15f;
         }
     }
 }

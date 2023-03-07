@@ -80,6 +80,7 @@ public class Enemy : MonoBehaviour
             Destroy(smite, 2);
             LevelManager.Instance.EnemySmote(scoreValue, faithValue);
         }
+        LevelAudioManager.Instance.PlayStrike();
     }
 
     public void RandomiseWalkHeight(float min, float max)
